@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TS Hypermart</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0E0F13;
+            color: #EAEAEA;
+        }
+     
+        header {
+            background-color: #16181D;
+            color: #FF4655;
+            padding: 1.5rem;
+            text-align: center;
+            animation: slideIn 1s ease-out;
+            text-decoration:none;
+            
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #1C1F25;
+            justify-content: space-around;
+            
+        }
+
+        nav a {
+            color: #EAEAEA;
+            padding: 1rem;
+            text-decoration: none;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #FF4655;
+            background-color: #2A2D34;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(to right, #FF4655, #FF7A29);
+            color: #0E0F13;
+            animation: fadeIn 2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        footer {
+            text-align: center;
+            background-color: #16181D;
+            color: #FF4655;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #FF4655;
+            color: #0E0F13;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            display: none;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .scroll-top.show {
+            display: block;
+            opacity: 1;
+        }
+
+        .scroll-top.hide {
+            opacity: 0;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            padding: 2rem;
+        }
+
+        .product-card {
+            background-color: #1C1F25;
+            border: 1px solid #444;
+            border-radius: 8px;
+            text-align: center;
+            padding: 1rem;
+            color: #EAEAEA;
+        }
+
+        .product-card img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <header>
+        <img src="whatt.png" height="400px"width="100%">
+        <h1 id="wtf"><a href=index.html>Welcome to TS Hypermart</a></h1>
+    </header>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+       
+        <a href="detail.html">PRODUCTS</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="services.html">Services</a>
+        <a href="faq.html">FAQ</a>
+        <a href="cart.html">CART</a>
+    </nav>
+    <div>
+   
+    <div class="hero">
+        <h2>Your One-Stop Shop for Everything!</h2>
+        <p>Browse our wide selection of products and enjoy exclusive deals.</p>
+    </div>
+    <header>
+        <h1>Our Products</h1>
+    </header>
+
+   
+
+    <section class="products">
+        <div class="product-card">
+            <img src="https://atlas-content-cdn.pixelsquid.com/assets_v2/245/2452423176773178782/jpeg-600/G03.jpg?modifiedAt=1" alt="PS5">
+            <h3>SONY PlayStation5 Console (slim) CFI-2008A01X 1024 GB  (White)</h3>
+            <p>₹54,990</p>
+        </div>
+        <div class="product-card">
+            <img src="https://www.imagineonline.store/cdn/shop/files/iPhone_16_Pro_Max_Desert_Titanium_PDP_Image_Position_1__en-IN_6313d2b8-ef64-40f0-b60a-d77be47fd058.jpg?v=1727250893&width=1445" alt="Product 2">
+            <h3>iPhone 16 Pro Max</h3>
+            <p>₹ 129,900</p>
+        </div>
+       
+        <div class="product-card">
+            <img src="https://rukminim2.flixcart.com/image/750/900/xif0q/physical-game/v/w/e/no-standard-god-of-war-ragnarok-full-game-ps5-original-imagk2zyqk9zzpeh.jpeg?q=20&crop=false" alt="Product 3">
+            <h3>God of War Ragnarok (Standard)  (for PS5)</h3>
+            <p>₹3,490</p>
+        </div>
+        <div class="product-card">
+            <img src="https://www.imagineonline.store/cdn/shop/files/MacBook_Air_13_in_M3_Midnight_PDP_Image_Position_1__en-IN.jpg?v=1709593572" alt="Product 4">
+            <h3>13-inch MacBook Air</h3>
+            <p>₹ 94,410</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 TS Hypermart. All rights reserved.</p>
+    </footer>
+
+    <button id="scrollTopBtn" class="scroll-top">Top</button>
+
+    <script>
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                scrollTopBtn.classList.add('show');
+                scrollTopBtn.classList.remove('hide');
+            } else {
+                scrollTopBtn.classList.remove('show');
+                scrollTopBtn.classList.add('hide');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

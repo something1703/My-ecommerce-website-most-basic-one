@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TS HYPERMART - FAQ</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #EAEAEA;
+        }
+
+        header {
+            background-color: #E73562;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background-color: #1E1E1E;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #333;
+            padding: 1rem 0;
+            cursor: pointer;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #E73562;
+        }
+
+        .faq-answer {
+            display: none;
+            margin-top: 0.5rem;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #CCCCCC;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item:hover .faq-question {
+            color: #FFFFFF;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #1C1F25;
+            justify-content: space-around;
+            
+        }
+
+        nav a {
+            color: #EAEAEA;
+            padding: 1rem;
+            text-decoration: none;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #FF4655;
+            background-color: #2A2D34;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        TS HYPERMART - Frequently Asked Questions
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+       
+        <a href="detail.html">PRODUCTS</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="services.html">Services</a>
+        <a href="faq.html">FAQ</a>
+        <a href="cart.html">CART</a>
+    </nav>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question">What is TS HYPERMART? <span>+</span></div>
+            <div class="faq-answer">TS HYPERMART is your one-stop solution for all your shopping needs, offering a wide range of products at competitive prices.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How can I track my order? <span>+</span></div>
+            <div class="faq-answer">You can track your order by logging into your account and visiting the 'My Orders' section. Alternatively, you will receive a tracking link via email after your order is shipped.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What payment methods are accepted? <span>+</span></div>
+            <div class="faq-answer">We accept major credit cards, debit cards, net banking, and digital wallets like PayPal and Google Pay.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What is your return policy? <span>+</span></div>
+            <div class="faq-answer">We offer a 30-day return policy on most items. Products must be returned in their original condition and packaging. Please visit our Returns page for more details.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How can I contact customer support? <span>+</span></div>
+            <div class="faq-answer">You can reach our customer support team through the 'Contact Us' page or by calling our helpline at 1-800-555-1234.</div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
