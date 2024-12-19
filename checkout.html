@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - TS Hypermart</title>
+    <link rel="stylesheet" href="bhai.css">
+    
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>TS Hypermart</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="electronics.html">Electronics</a></li>
+                <li><a href="clothing.html">Clothing</a></li>
+                <li><a href="toys.html">Toys</a></li>
+                <li><a href="furniture.html">Furniture</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="checkout">
+            <h2>Checkout</h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="ELON MUSK" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="rudra@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" rows="3" placeholder="KIET GHAZIABAD" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="payment-method">Payment Method</label>
+                    <select id="payment-method" required>
+                        <option value="" disabled selected>Select a payment method</option>
+                        <option value="credit-card">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="cash-on-delivery">Cash on Delivery</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="card-details" id="card-details-label">Card Details</label>
+                    <input type="text" id="card-details" placeholder="Card Number (if applicable)">
+                </div>
+                <div class="form-summary">
+                    <p>Total Price: $<span id="checkout-total-price">1703</p>
+                </div>
+                <button type="submit" class="checkout-btn">Place Order</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TS Hypermart. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
